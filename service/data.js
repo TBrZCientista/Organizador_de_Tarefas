@@ -7,3 +7,12 @@ export const removeDatasRepetidas = (datas) => {
     }))
     return datasUnicas
 }
+
+export const ordenaDatas = (data) => {
+    data.sort((a, b) => {
+        const primeiraData = moment(a, 'DD/MM/YYYY').format('YYYYMMDD')
+        console.log(primeiraData)
+        const segundaData = moment(b, 'DD/MM/YYYY').format('YYYYMMDD')
+        return primeiraData - segundaData
+    })
+}   
